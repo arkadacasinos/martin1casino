@@ -1,0 +1,244 @@
+@import 'tailwindcss';
+
+:root {
+  --v7k3-bg: #0b2b22;
+  --v7k3-bg-soft: #10382c;
+  --v7k3-bg-line: #1d4a3b;
+  --v7k3-gold: #c9a227;
+  --v7k3-gold-soft: #e0bd4a;
+  --v7k3-cream: #f2ede0;
+  --v7k3-muted: #a9bdb2;
+  --v7k3-ink: #141414;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--v7k3-bg);
+  color: var(--v7k3-cream);
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- Shell ---------- */
+.v7k3-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.v7k3-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+
+/* ---------- Nav ---------- */
+.v7k3-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--v7k3-bg-line);
+}
+
+.v7k3-brand {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--v7k3-cream);
+  text-decoration: none;
+}
+
+.v7k3-brand-mark {
+  color: var(--v7k3-gold);
+}
+
+.v7k3-nav-note {
+  font-size: 0.8rem;
+  color: var(--v7k3-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ---------- Hero ---------- */
+.v7k3-hero {
+  padding: 40px 20px 28px;
+}
+
+.v7k3-hero-title {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.9rem, 6vw, 3rem);
+  line-height: 1.15;
+  font-weight: 700;
+  margin: 0 0 18px;
+  color: var(--v7k3-cream);
+  text-wrap: balance;
+}
+
+.v7k3-hero-title .v7k3-accent {
+  color: var(--v7k3-gold);
+}
+
+.v7k3-hero-text {
+  font-size: 1.02rem;
+  color: var(--v7k3-muted);
+  margin: 0 0 26px;
+  max-width: 62ch;
+}
+
+.v7k3-hero-media {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--v7k3-bg-line);
+}
+
+.v7k3-hero-media img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ---------- Sections ---------- */
+.v7k3-section {
+  padding: 34px 20px;
+  border-top: 1px solid var(--v7k3-bg-line);
+}
+
+.v7k3-section--soft {
+  background: var(--v7k3-bg-soft);
+}
+
+.v7k3-section-title {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.45rem, 4.5vw, 2rem);
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 0 14px;
+  color: var(--v7k3-cream);
+  text-wrap: balance;
+}
+
+.v7k3-section-title .v7k3-accent {
+  color: var(--v7k3-gold);
+}
+
+.v7k3-section-text {
+  font-size: 1rem;
+  color: var(--v7k3-muted);
+  margin: 0 0 20px;
+  max-width: 66ch;
+}
+
+.v7k3-section-text strong {
+  color: var(--v7k3-cream);
+  font-weight: 600;
+}
+
+.v7k3-media {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--v7k3-bg-line);
+  margin-top: 6px;
+}
+
+.v7k3-media img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ---------- Footer ---------- */
+.v7k3-footer {
+  padding: 34px 20px 40px;
+  border-top: 1px solid var(--v7k3-bg-line);
+  background: var(--v7k3-bg-soft);
+}
+
+.v7k3-footer-title {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--v7k3-cream);
+}
+
+.v7k3-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.v7k3-tag {
+  display: inline-block;
+  font-size: 0.82rem;
+  color: var(--v7k3-gold-soft);
+  background: rgba(201, 162, 39, 0.1);
+  border: 1px solid rgba(201, 162, 39, 0.28);
+  border-radius: 999px;
+  padding: 6px 14px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.v7k3-tag:hover {
+  background: rgba(201, 162, 39, 0.2);
+  color: var(--v7k3-cream);
+}
+
+.v7k3-footer-note {
+  margin: 22px 0 0;
+  font-size: 0.8rem;
+  color: var(--v7k3-muted);
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 768px) {
+  .v7k3-nav {
+    padding: 22px 40px;
+  }
+
+  .v7k3-hero {
+    padding: 56px 40px 36px;
+  }
+
+  .v7k3-section {
+    padding: 48px 40px;
+  }
+
+  .v7k3-footer {
+    padding: 44px 40px 52px;
+  }
+
+  .v7k3-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .v7k3-grid .v7k3-media {
+    margin-top: 0;
+  }
+}
